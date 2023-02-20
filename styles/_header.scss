@@ -1,0 +1,125 @@
+.header {
+    height: 168px;
+    width: 100%;
+    padding: 2rem;
+
+    background-color: $black;
+    color: $white;
+}
+
+.navbar {
+    position: relative;
+    margin-left: 88px;
+    align-items: center;
+
+    &-lists {
+        @include flex();
+        justify-content: start;
+        align-items: start;
+    }
+
+    &-list {
+        padding-right: 1.5rem;
+        list-style: none;
+    }
+
+    &-link {
+        color: $white;
+        font-size: $font-14;
+
+        &__option {
+            border-radius: 31px;
+            color: $white;
+            background-color: $gray;
+            font-weight: $font-w-400;
+            font-size: $font-14;
+            text-align: center;
+        }
+
+        &--none {
+            text-decoration: none;
+            font-weight: $font-w-500;
+            font-size: $font-14;
+            color: $white;
+        }
+
+        &--color {
+            color: $gray;
+        }
+    }
+}
+
+.navbar-second {
+    position: relative;
+    margin-left: 88px;
+
+    &__lists {
+        @include flex();
+    }
+
+    &__list {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        list-style: none;
+
+        &--togle {
+            @include flex();
+            width: 148px;
+            height: 46px;
+            border-radius: 8px;
+            background-color: $secondary-color;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-size: $font-14;
+        text-decoration: none;
+
+        &--togle {
+            font-weight: $font-w-500;
+            font-size: $font-18;
+            color: $black;
+            text-align: center;
+            text-decoration: none;
+
+            margin-left: 2rem;
+        }
+
+        &--title {
+            font-weight: $font-w-500;
+            font-size: $font-26;
+            text-decoration: none;
+
+            color: $white;
+        }
+    }
+
+    &__title {
+        font-size: $font-14;
+        font-weight: $font-w-400;
+
+        color: $white;
+        text-align: center;
+    }
+}
+
+.contacts {
+    width: 56px;
+    padding: 2rem;
+    padding-left: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search {
+    background-color: $gray;
+    color: $white;
+
+    width: 459px;
+    height: 56px;
+    border-radius: 60px;
+
+    padding-top: 1rem;
+    padding-left: 1rem;
+}

@@ -1,0 +1,21 @@
+html,
+body {
+    font-family: $fontfamily;
+    font-size: $font-16;
+
+    color: $black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    @include container();
+}
+
+.h2 {
+    color: $primary-color;
+    font-weight: $font-w-500;
+    font-size: $font-32;
+}

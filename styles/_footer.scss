@@ -1,0 +1,55 @@
+.footer {
+    @include flex-evenly();
+    width: 100%;
+    background-color: $black;
+    margin: 1rem;
+
+    &-navigation {
+        &__lists {
+            padding: 1rem;
+        }
+
+        &__list {
+            margin: .5px;
+        }
+
+        &__list a {
+            color: $white;
+            text-align: center;
+            font-weight: $font-w-400;
+            font-size: $font-16;
+        }
+    }
+
+    &-contacts {
+        margin-top: 50px;
+        height: 250px;
+
+        &__lists {
+            height: 150px;
+        }
+
+        &__list--weigth {
+            color: $white;
+            font-weight: $font-w-700;
+            font-size: $font-14;
+            padding: .5rem;
+        }
+
+        &__link {
+            color: $white;
+            font-weight: $font-w-500;
+            font-size: $font-14;
+            padding: .5rem;
+        }
+
+        &__payment {
+            margin-right: 4rem;
+        }
+
+        &__payment_lists {
+            @include flex-evenly();
+            padding: .5rem;
+        }
+    }
+}

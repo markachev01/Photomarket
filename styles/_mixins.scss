@@ -1,0 +1,16 @@
+@mixin container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-evenly () {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

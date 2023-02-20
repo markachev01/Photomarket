@@ -1,0 +1,53 @@
+.swiper {
+  width: 1280px;
+  height: 360px;
+}
+
+.sales-slide {
+  @include flex();
+}
+
+.sale-slide {
+  position: relative;
+  max-width: 1120;
+  margin: 1px;
+  padding: 1rem;
+
+  background-image: url('../img/image\ 61\ \(1\).png');
+  width: 1280px;
+  height: 360px;
+  color: $white;
+
+  &__title {
+    color: $white;
+    font-size: $font-32;
+    font-weight: $font-w-700;
+    padding: 7rem 0 0 1rem;
+  }
+
+  &__description {
+    color: $gray-ligth;
+    font-size: $font-16;
+    font-weight: $font-w-500;
+    padding: 2rem 0 0 1rem;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 220px;
+    height: 46px;
+    left: 30px;
+    top: 250px;
+
+    &--more {
+      border: 1px solid $secondary-color;
+      border-radius: 28px;
+      color: $secondary-color;
+      font-size: $font-14;
+      font-weight: $font-w-500;
+      background-color: $black;
+    }
+  }
+
+
+}

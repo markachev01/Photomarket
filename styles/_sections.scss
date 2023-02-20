@@ -1,0 +1,175 @@
+.sale-products {
+    @include flex();
+
+    margin-top: 5rem;
+
+    &__lists {
+        width: calc(100% / 3);
+        height: 280px;
+
+        position: relative;
+
+        margin: 30px;
+        padding: 2rem;
+        text-align: center;
+        background-color: $gray-ligth;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    &__list {
+        @include flex();
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        font-weight: $font-w-400;
+        font-size: $font-16;
+        color: $black;
+        line-height: 20px;
+    }
+
+    &__price {
+        font-weight: $font-w-700;
+        font-size: $font-26;
+        color: $black;
+    }
+
+    &__cards-text {
+        font-weight: $font-w-500;
+        font-size: $font-26;
+        line-height: 29px;
+
+        @include flex();
+        justify-content: center;
+        position: absolute;
+        z-index: 10;
+        background-color: $secondary-color;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 160px;
+        left: 230px;
+        rotate: -10deg;
+    }
+
+    &__cards-text--red {
+        font-weight: $font-w-500;
+        font-size: $font-26;
+        line-height: 29px;
+
+        @include flex();
+        justify-content: center;
+        position: absolute;
+        z-index: 10;
+        background-color: $red;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 160px;
+        left: 230px;
+        rotate: -10deg;
+    }
+
+    &__cards-discount {
+
+
+        &--size {
+            font-size: $font-16;
+        }
+    }
+}
+
+.sale-hits {
+    &__cards {
+        @include flex();
+        margin-top: 3rem;
+    }
+
+    &__title {
+        font-weight: $font-w-500;
+        font-size: $font-32;
+    }
+
+    &__price {
+        font-weight: $font-w-700;
+        font-size: $font-18;
+        color: $black;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+
+        &--decor {
+            font-weight: $font-w-400;
+            font-size: $font-14;
+            opacity: 50%;
+            text-decoration: line-through;
+        }
+    }
+
+    &__description {
+        font-weight: $font-w-400;
+        font-size: $font-14;
+        color: $black;
+        opacity: 50%;
+    }
+
+    &__img {
+        height: 148px;
+        width: 152px;
+
+
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 1rem;
+
+        background-color: $gray-ligth;
+        width: 220px;
+        height: 46px;
+
+        border: 1px solid $white;
+        border-radius: 28px;
+
+        text-align: center;
+        font-weight: $font-w-500;
+
+        cursor: pointer;
+
+        position: absolute;
+        left: 650px;
+    }
+}
+
+.brand-products {
+    margin-top: 8rem;
+
+    &__lists {
+        @include flex-evenly();
+    }
+
+    &__list {
+        margin: 1rem;
+    }
+}
+
+.reviews {
+    margin-top: 2rem;
+
+    &-lists {
+        @include flex-evenly();
+
+        margin-top: 3rem;
+        text-align: center;
+
+        &-list {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        &-list p {
+            font-size: $font-16;
+        }
+    }
+}
