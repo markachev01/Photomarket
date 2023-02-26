@@ -1,21 +1,25 @@
 .swiper {
-  width: 1280px;
+margin-top: 3rem;
+
+  width: 1120px;
   height: 360px;
 }
 
 .sales-slide {
-  @include flex();
+  background-image: url('../img/image\ 61\ \(1\).png');
+
+  width: 1120px;
+  height: 360px;
 }
 
 .sale-slide {
   position: relative;
-  max-width: 1120;
+  max-width: 1120px;
   margin: 1px;
   padding: 1rem;
 
-  background-image: url('../img/image\ 61\ \(1\).png');
-  width: 1280px;
-  height: 360px;
+ 
+
   color: $white;
 
   &__title {
@@ -33,21 +37,57 @@
   }
 
   &__btn {
-    position: absolute;
-    width: 220px;
+    border: 1px solid $secondary-color;
+    border-radius: 28px;
+    color: $secondary-color;
+
+    font-size: $font-14;
+    font-weight: $font-w-500;
+
+    background-color: $black;
+
+    width: 148px;
     height: 46px;
+    text-align: center;
+
+    position: absolute;
     left: 30px;
     top: 250px;
 
-    &--more {
-      border: 1px solid $secondary-color;
-      border-radius: 28px;
-      color: $secondary-color;
-      font-size: $font-14;
-      font-weight: $font-w-500;
-      background-color: $black;
+    &--text {
+      margin-top: 1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      background-color: $secondary-color;
+      color: $black;
+
+      transition: .3s;
     }
   }
+}
 
 
+@media screen and (max-width: 591px) {
+  .swiper {
+    width: 543px;
+  height: 330px;
+  }
+
+  .sales-slide {
+    width: 543px;
+    height: 330px;
+  }
+
+  .sale-slide {
+    position: relative;
+    max-width: 543px;
+    
+    margin: 1px;
+    padding: 1rem;
+  
+    color: $white;
+  }
 }

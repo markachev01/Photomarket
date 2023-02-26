@@ -1,7 +1,7 @@
 .sale-products {
     @include flex();
 
-    margin-top: 5rem;
+    margin-top: 3rem;
 
     &__lists {
         width: calc(100% / 3);
@@ -12,8 +12,10 @@
         margin: 30px;
         padding: 2rem;
         text-align: center;
+
         background-color: $gray-ligth;
         border-radius: 20px;
+
         cursor: pointer;
     }
 
@@ -27,6 +29,8 @@
         font-size: $font-16;
         color: $black;
         line-height: 20px;
+
+        text-align: left;
     }
 
     &__price {
@@ -83,7 +87,7 @@
 .sale-hits {
     &__cards {
         @include flex();
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 
     &__title {
@@ -155,7 +159,7 @@
 }
 
 .reviews {
-    margin-top: 2rem;
+    margin-top: 3rem;
 
     &-lists {
         @include flex-evenly();
@@ -171,5 +175,150 @@
         &-list p {
             font-size: $font-16;
         }
+    }
+}
+
+.blocks-instagram {
+    margin-top: 2rem
+}
+
+.block-instagram {
+    @include flex-evenly();
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    position: relative;
+
+    &__link {
+        color: $white;
+
+        font-weight: $font-w-400;
+        font-size: $font-14;
+
+        position: absolute;
+        left: 570px;
+        top: 90px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 591px) {
+    .sale-products {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &__cards-text {
+            font-weight: $font-w-500;
+            font-size: $font-14;
+            line-height: 20px;
+
+            @include flex();
+            justify-content: center;
+            position: absolute;
+            z-index: 10;
+            background-color: $secondary-color;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            top: 180px;
+            left: 110px;
+            rotate: -10deg;
+        }
+
+        &__cards-text--red {
+            font-weight: $font-w-500;
+            font-size: $font-14;
+            line-height: 20px;
+
+            @include flex();
+            justify-content: center;
+            position: absolute;
+            z-index: 10;
+            background-color: $red;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            top: 180px;
+            left: 110px;
+            rotate: -10deg;
+        }
+
+        &__cards-img {
+            width: 150px;
+            height: 120px;
+
+            margin-right: 4rem;
+        }
+
+        &__price {
+            font-weight: $font-w-700;
+            font-size: $font-16;
+        }
+
+        &__description {
+            font-weight: $font-w-400;
+            font-size: $font-14;
+        }
+    }
+
+    .sale-hits__cards {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .sale-hits__price {
+        font-size: $font-14;
+        text-align: center;
+    }
+
+    .sale-hits__description {
+        font-size: $font-14;
+        text-align: center;
+    }
+
+    .brand-products {
+        width: 590px;
+        margin-top: 2rem;
+
+        &__lists {
+            width: 590px;
+        }
+
+        &__list img {
+            width: 80px;
+            margin-right: .3rem;
+        }
+    }
+
+    .reviews {
+        width: 543px;
+
+        &-lists {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-list {
+            margin-top: 2rem;
+        }
+    }
+
+    .block-instagram {
+        display: flex;
+        flex-direction: column;
+
+        &__link {
+            top: 600px;
+            left: 240px;
+        }
+    }
+
+    .block-instagram img {
+        margin-top: 2rem;
     }
 }

@@ -1,7 +1,7 @@
 .header {
     height: 168px;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0 2rem 2rem;
 
     background-color: $black;
     color: $white;
@@ -51,15 +51,16 @@
 
 .navbar-second {
     position: relative;
-    margin-left: 88px;
+    margin-left: 60px;
+    margin-right: 60px;
 
     &__lists {
         @include flex();
     }
 
     &__list {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
         list-style: none;
 
         &--togle {
@@ -102,6 +103,10 @@
         color: $white;
         text-align: center;
     }
+
+    &__image {
+        margin-left: 4px;
+    }
 }
 
 .contacts {
@@ -120,6 +125,85 @@
     height: 56px;
     border-radius: 60px;
 
-    padding-top: 1rem;
+    padding-top: .5rem;
     padding-left: 1rem;
+}
+
+
+@media screen and (max-width: 591px) {
+    .header {
+        width: 590px;
+        height: 296px;
+
+        padding: 0px;
+    }
+
+    .search {
+        width: 543px;
+    }
+
+    .navbar {
+        display: none;
+
+        margin-left: 2rem;
+    }
+
+    .navbar-second {
+        &__list--togle {
+            display: none;
+        }
+
+        &__lists {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            padding-top: 4rem;
+        }
+
+        &__list {}
+
+        &__list--search {
+            width: 480px;
+            border-radius: 16px;
+
+            background-color: $white;
+
+            padding-top: 2rem;
+            margin-right: 20rem;
+            margin-top: 2rem;
+
+        }
+
+        &__link {
+            &--title {
+                margin-right: 32rem;
+
+                font-size: $font-48;
+                font-weight: $font-w-700;
+            }
+        }
+    }
+
+    .contacts {
+        display: none;
+    }
+
+    .search {
+        width: 480px;
+        border: none;
+
+        padding-bottom: 2rem;
+
+        color: $silver;
+
+        font-size: $font-24;
+
+        &::placeholder {
+            font-size: $font-24;
+            font-weight: $font-w-400;
+
+            color: $silver;
+        }
+    }
 }

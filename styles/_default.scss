@@ -14,8 +14,14 @@ a {
     @include container();
 }
 
-.h2 {
+h2 {
     color: $primary-color;
     font-weight: $font-w-500;
     font-size: $font-32;
+}
+
+@media screen and (max-width: 591px) {
+    h2 {
+        text-align: center;
+    }
 }
